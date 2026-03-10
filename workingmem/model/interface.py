@@ -60,7 +60,7 @@ class ModelConfig:
     n_ctx: int = 1205  # this should be set so that it is longer than the longest trial sequence length we expect to use with the model. i.e., 4 * seq_len + change. for 300, we need at least 1201.
     d_head: int = 128
     d_mlp: int = 0
-    d_vocab: int = None  # vocab dim is determined by the tokenizer
+    d_vocab: int = -1  # vocab dim is determined by the tokenizer
 
     # type of positional embedding to use: "rotary", "standard", None
     # NOTE! passing None corresponds to NOPE (no positional embeddings) rather

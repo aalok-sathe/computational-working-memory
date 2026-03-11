@@ -18,9 +18,6 @@ permissions:
 jobs:
   # Build the documentation and upload the static HTML files as an artifact.
   build:
-    with:
-      env:
-        WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -38,6 +35,9 @@ jobs:
       # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - run: . ./.venv/bin/activate
       - name: wandb login
+        with:
+          env:
+            WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
         run: uv run wandb login "$WANDB_API_KEY"
       - run: uv run pdoc workingmem -o docs/ 
 

@@ -27,7 +27,7 @@ jobs:
       - run: pip install uv 
 
       # ADJUST THIS: install all dependencies (including pdoc)
-      - run: uv pip install -e .
+      - run: uv pip install -e . --system
       # ADJUST THIS: build your documentation into docs/.
       # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - run: pdoc workingmem -o docs/ 

@@ -9,8 +9,6 @@ on:
     # tags:
     #   - '*'
 
-
-
 # security: restrict permissions for CI jobs.
 permissions:
   contents: read
@@ -25,17 +23,14 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@v6
         with:
-          python-version: '3.14'
+          python-version: '3.12'
       - run: pip install pdoc wandb
-      # ADJUST THIS: install all dependencies (including pdoc)
-      - run: pip install -e . 
-      # ADJUST THIS: build your documentation into docs/.
-      # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - name: wandb login
         env:
           WANDB_API_KEY: ${{ secrets.WANDB_API_KEY }}
         run: export WANDB_API_KEY="$WANDB_API_KEY"; wandb login 
-
+      - run: pip install -e . 
+      # We use a custom build script for pdoc itself, ideally you just run `pdoc -o docs/ ...` here.
       - run: pdoc workingmem -o docs/ 
 
       - uses: actions/upload-pages-artifact@v4

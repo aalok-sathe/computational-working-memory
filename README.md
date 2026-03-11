@@ -1,4 +1,4 @@
-# `sWiMm` 🏊: simulation of working memory management in neural networks
+# `simWM` 🏊: simulation of working memory management with neural networks
 
 ## Introduction
 Perceptual as well organism-internal information is plentiful---being able to use all of this information is essential to optimal planning and decision-making. 

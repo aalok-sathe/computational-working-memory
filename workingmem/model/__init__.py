@@ -1,3 +1,7 @@
+"""
+include: ../README.md
+"""
+
 import dataclasses
 
 from workingmem.model.model import (

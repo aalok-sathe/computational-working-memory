@@ -15,6 +15,7 @@ independent_variables:
   - dataset.n_back: ['2 3 4']
     dataset.concurrent_reg: ['2 3 4']
   - model.model_class: ['rnn', 'lstm', 'transformer']
+  - trainer.interleaved: [ true ]
 
 
 #### conditional variables

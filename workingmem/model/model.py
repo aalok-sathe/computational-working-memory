@@ -376,6 +376,9 @@ class ModelWrapper(ABC):
                     )
                 ]
 
+            #### IF SCAFFOLDED: we want to train sequentially for entire epochs on subsequent datasets.
+            # NotImplemented yet
+
         _len_train_dataset = (
             sum(len(d) for d in dataset) if isinstance(dataset, list) else len(dataset)
         )

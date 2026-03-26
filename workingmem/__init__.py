@@ -172,8 +172,7 @@ def main(config: MainConfig):
         # which will trigger constructing dataset examples and caching it to disk).
         # second, we will draw a proportionate sample of train, eval, and test examples
         # from each of these parent datasets. the proportions will be n_examples / len(concurrent_reg_values).
-        # we will assemble these samples into a new mixture dataset for
-        # meta-training.
+        # we will assemble these samples into a new mixture dataset for meta-training.
 
         concurrent_reg_values = tuple(config.dataset.concurrent_reg)
         # initialize a train, eval, and test dataset for each of the values and add it to a list

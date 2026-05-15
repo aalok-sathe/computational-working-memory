@@ -45,7 +45,7 @@ To exhaustively see the CLI options, run `python -m workingmem -h`.
    
 1. Install `uv` (recommended)
 
-    `simWM` uses [`uv`](https://atral.sh/uv) as its package- and environement-manager. `uv` makes painless the age-old task of managing dependencies
+    `simWM` uses [`uv`](https://astral.sh/uv) as its package- and environement-manager. `uv` makes painless the age-old task of managing dependencies
     in Python. In order to install the framework, you'll need to install `uv` on your system. This is fairly straightforward---visit the link from before.
 
 1. Install `sWiMm` 
